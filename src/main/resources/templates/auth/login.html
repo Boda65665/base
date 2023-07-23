@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="color:red" th:text="${not_correct_ps}">
+
+
+<form action="/auth/login" method="post" th:object="${user}">
+    <label for="email">Enter email: </label>
+
+    <input type="text" th:field="*{email}" name ="email" id="email"/>
+    <br>
+    <label for="password">Enter password: </label>
+
+    <input name ="password" id="password" th:field="*{password}" type="text">
+    <br>
+    <input type="submit" value="log in">
+</form>
+<br>
+Еще не зарегестрированы? <a href="/auth/reg">Log up</a>
+<br>
+Забыли пароль? <a href="/auth/restoring_password">Востановить</a>
+
+</body>
+</html>

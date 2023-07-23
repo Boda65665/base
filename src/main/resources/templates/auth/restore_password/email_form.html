@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="color:red" th:text="${err_not_found}">
+
+<form action="/auth/restoring_password" method="post">
+   Введите email: <input type="text" name="email" id="email">
+    <br>
+    <input type="submit" value="Отправить">
+</form>
+</body>
+</html>
